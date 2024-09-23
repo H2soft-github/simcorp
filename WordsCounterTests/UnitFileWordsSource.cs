@@ -22,7 +22,7 @@ namespace WordsCounterTests
         [Fact]
         public async Task Example1ReadingTest()
         {
-            var words = new string[] { "Go", "do", "that", "thing", "that", "you", "do", "so", "well" };
+            var words = new string[] { "go", "do", "that", "thing", "that", "you", "do", "so", "well" };
             var result = await new FileWordsSource(Path.Combine(filesDir, "file1.txt")).LoadWords();
             Assert.Equal(words, result);
         }
@@ -30,7 +30,7 @@ namespace WordsCounterTests
         [Fact]
         public async Task Example2ReadingTest()
         {
-            var words = new string[] { "I", "play", "football", "well" };
+            var words = new string[] { "i", "play", "football", "well" };
             var result = await new FileWordsSource(Path.Combine(filesDir, "file2.txt")).LoadWords();
             Assert.Equal(words, result);
         }
@@ -38,7 +38,7 @@ namespace WordsCounterTests
         [Fact]
         public async Task WhiteCharsTest()
         {
-            var words = new string[] { "I", "play", "football", "well" };
+            var words = new string[] { "i", "play", "football", "well" };
             var result = await new FileWordsSource(Path.Combine(filesDir, "file3.txt")).LoadWords();
             Assert.Equal(words, result);
         }

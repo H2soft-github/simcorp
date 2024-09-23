@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using WordsCounterApp.WordsCouterLogic;
 using WordsCounterApp.WordsSources;
@@ -49,6 +50,7 @@ namespace WordsCounterApp
             var filesPaths = commandLineArgs.Skip(1).ToList();
             Console.WriteLine("Files:");
             filesPaths.ToList().ForEach(x => Console.WriteLine(x));
+            new FilesValidator(filesPaths).Validate();
             return filesPaths;
         }
 

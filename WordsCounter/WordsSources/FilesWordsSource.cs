@@ -28,8 +28,7 @@ namespace WordsCounterApp.WordsSources
                     while ((line = await reader.ReadLineAsync()) != null)
                     {
                         var lineWords = line.Split(SEPARATORS, StringSplitOptions.RemoveEmptyEntries);
-                        // TODO: ask about captialize
-                        // lineWords = lineWords.Select(x => x.ToLower()).ToArray();
+                        lineWords = lineWords.Select(x => x.ToLower()).ToArray();
                         words.AddRange(lineWords);
                     }
                 }
